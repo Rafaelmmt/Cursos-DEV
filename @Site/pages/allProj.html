@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cursos 23-24</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5adf2a6df3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <main id="app">
+
+        <header>
+            <a href="../index.html">Cursos 23-24</a>
+        </header>
+        
+        <div class="all-projects">
+            <div v-for="projeto in projetos" class="project-00">
+                <a :href="projeto.link" target="_blank"><img :src="projeto.print"></a>
+                <h3>{{projeto.name}}</h3>
+                <p>{{projeto.description}}</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="allProj.js"></script>
+</body>
+
+</html>

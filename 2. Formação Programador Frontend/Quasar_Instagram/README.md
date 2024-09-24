@@ -1,33 +1,6 @@
 # Instagram (proj02)
 
-Projeto simulando o Instagram
+Projeto utilizando o framework QUASAR para replicar o layout e algumas funcionalidades do Instagram.
 
-## Install the dependencies
-```bash
-yarn
-# or
-npm install
-```
+<img src="public/media/print/print01.png"><img src="public/media/print/print02.png"><img src="public/media/print/print03.png">
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
-
-
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

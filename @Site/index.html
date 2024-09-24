@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cursos 23-24</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5adf2a6df3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main id="app">
+
+        <header>
+            <a href="https://linktr.ee/rmmt" target="_blank">Cursos 23-24</a>
+        </header>
+
+        <!-- CURSO 01 -->
+        <div class="container-courses">
+            <div class="courses">
+                <h1 @click="openC01 = !openC01, openC02 = false, openC03 = false, openC04 = false">Desenvolvedor Web Completo: HTML, CSS, Javascript, Vue e Git</h1>
+                <a href="https://www.udemy.com/course/desenvolvedor-web-front-end-completo-html-css-javascript-vue-js-e-git/" target="_blank">
+                    <i class="fa-solid fa-graduation-cap"></i>Udemy.com
+                </a><span>|</span><i class="fa-solid fa-chalkboard-user"></i>Ivan Lourenço Gomes<span>|</span>
+                <a href="media/Certificados/Udemy - Desenvolvedor Web Completo (HTML, CSS, Javascript, Vue e Git).pdf" target="_blank">
+                    <i class="fa-solid fa-certificate"></i>Certificado
+                </a>
+            </div>
+        </div><hr>
+        
+        <!-- PROJETOS CURSO 01 -->
+        <div v-if="openC01">
+            <div class="all-projects">
+                <div v-for="projeto in projetosC01" class="project-00">
+                    <a :href="projeto.link" target="_blank"><img :src="projeto.print"></a>
+                    <h3>{{projeto.name}}</h3>
+                    <p>{{projeto.description}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CURSO 02 -->
+        <div class="container-courses">
+            <div class="courses">
+                <h1 @click="openC02 = !openC02, openC01 = false, openC03 = false, openC04 = false">Formação Programador Frontend - VueJS</h1>
+                <a href="https://www.udemy.com/course/formacao-programador-frontend-vuejs/" target="_blank">
+                    <i class="fa-solid fa-graduation-cap"></i>Udemy.com
+                </a><span>|</span><i class="fa-solid fa-chalkboard-user"></i>Daniel Lopes<span>|</span>
+                <a href="media/Certificados/Udemy - Formação Programador Frontend - VueJS.pdf" target="_blank">
+                    <i class="fa-solid fa-certificate"></i>Certificado
+                </a>
+            </div>
+        </div><hr>
+
+        <!-- PROJETOS CURSO 02 -->
+        <div v-if="openC02">
+            <div class="all-projects">
+                <div v-for="projeto in projetosC02" class="project-00">
+                    <a :href="projeto.link" target="_blank"><img :src="projeto.print"></a>
+                    <h3>{{projeto.name}}</h3>
+                    <p>{{projeto.description}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CURSO 03 -->
+        <div class="container-courses">
+            <div class="courses">
+                <h1 @click="openC04 = !openC04, openC01 = false, openC02=false, openC03 = false">Vue JS 3: Composition API (with Pinia, Firebase 9 & Vite)</h1>
+                <a href="https://www.udemy.com/course/vue-js-3-composition-api/" target="_blank"><i class="fa-solid fa-graduation-cap"></i>Udemy.com</a>
+                <span>|</span><i class="fa-solid fa-chalkboard-user"></i>Danny Connell<span>|</span>
+                <a href="media/Certificados/Udemy - Vue JS 3 (Composition API).pdf" target="_blank"><i class="fa-solid fa-certificate"></i>Certificado</a>
+            </div>
+        </div><hr>
+
+        <!-- PROJETOS CURSO 03 -->
+        <div v-if="openC04">
+            <div class="all-projects">
+                <div v-for="projeto in projetosC04" class="project-00">
+                    <a :href="projeto.link" target="_blank"><img :src="projeto.print"></a>
+                    <h3>{{projeto.name}}</h3>
+                    <p>{{projeto.description}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODOS OS CURSOS -->
+        <p class="todos">
+            <i class="fa-solid fa-arrow-right"></i> 
+            <a href="pages/allProj.html">Todos os Projetos</a>
+        </p>
+
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

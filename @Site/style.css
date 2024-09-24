@@ -1,0 +1,179 @@
+body {
+    overflow-y: scroll;
+    font-family: "Oswald", sans-serif;
+    color: #3A4750;
+    background-color: #F3F3F3;
+    width: 960px;
+    margin: 45px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header a {
+    color: #9b9b9b;
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    padding: 6px 18px;
+    border-bottom: 1px solid #9b9b9b;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #005f73;
+    border-bottom: 1px solid #005f73;
+
+}
+
+.container-courses {
+    display: flex;
+}
+
+.courses h1 {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 30px 6px 0 6px;
+}
+
+.courses h1:hover {
+    color: #005f73;
+}
+
+.courses {
+    font-size: 18px;
+}
+
+.courses i {
+    margin: 15px 9px 21px 6px;
+}
+
+.courses a {
+    color: #3A4750;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.courses a:hover {
+    color: #005f73;
+}
+
+.courses span{
+    font-size: 12px;
+    margin: 0 6px 0 9px;
+}
+
+hr {
+    margin: 6px 0px;
+}
+
+.all-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.project-00 {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    margin: 45px 24px 0 24px;
+}
+
+.project-00 img{
+    height: 180px;
+    width: 270px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-00 h3 {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 15px 6px 15px;
+    margin: 0;
+}
+
+.project-00 p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    padding: 0px 15px;
+    margin: 0;
+    
+}
+
+.todos {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 60px 6px;
+}
+
+.todos i {
+    margin-right: 9px;
+}
+
+.todos a {
+    color: #3A4750;
+    cursor: pointer;
+}
+
+.todos a:hover {
+    color: #005f73;
+}
+
+/* TABLET */
+@media screen and (max-width: 1056px) {
+    body {
+        width: 90%;
+    }
+}
+
+/* CELULAR */
+@media screen and (max-width: 725px) {
+        
+    header {
+        margin-bottom: 21px;
+    }
+        
+    header a {
+        font-size: 18px;
+        padding: 6px 18px;
+    }
+
+    .courses h1 {
+        font-size: 21px;
+    }
+
+    .courses {
+        font-size: 12px;
+    }
+
+    .courses i {
+        margin: 12px 6px 12px 6px;
+    }
+
+    .courses span{
+        font-size: 9px;
+        margin: 0 3px 0 6px;
+    }
+
+    .all-projects {
+        justify-content: space-around;
+    }
+    .project-00 {
+        width: 300px;
+        margin: 45px 9px 0 9px;
+    }
+    
+    .project-00 img{
+        height: 200px;
+        width: 300px;
+    }
+}
