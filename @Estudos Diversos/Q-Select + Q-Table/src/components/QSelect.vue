@@ -1,47 +1,60 @@
 <template>
-  <q-page class="flex flex-center row" padding>
+  <div>
+    <q-select
+      class="col q-ma-xl"
+      label="Arma"
+      v-model="opSelecionada.arma"
+      :options="opMenu('arma')"
+      clearable
+  
+    />
     <q-select
       class="col q-ma-xl"
       label="Especie"
       v-model="opSelecionada.especie"
       :options="opMenu('especie')"
+      clearable
+  
     />
     <q-select
       class="col q-ma-xl"
       label="Marca"
       v-model="opSelecionada.marca"
       :options="opMenu('marca')"
+      clearable
     />
     <q-select
       class="col q-ma-xl"
       label="Modelo"
       v-model="opSelecionada.modelo"
       :options="opMenu('modelo')"
+      clearable
     />
     <q-select
       class="col q-ma-xl"
       label="Situação"
       v-model="opSelecionada.situacao"
       :options="opMenu('situacao')"
+      clearable
     />
     <q-select
       class="col q-ma-xl"
       label="ID"
       v-model="opSelecionada.id"
       :options="opMenu('id')"
+      clearable
     />
-    <div>
-      {{ opFiltrada() }}
-    </div>
-  </q-page>
+  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import QSelect from 'src/components/QSelect.vue';
 
 // PINIA STORE
 import { useMainStore } from 'src/stores/mainStore'
 const store = useMainStore()
+
 const opSelecionada = ref({})
 
 const opMenu = (campo) => {
@@ -54,7 +67,7 @@ const opMenu = (campo) => {
   });
 
   // Retorna as opções únicas para o seletor baseado na chave (campo)
-  return opcoesFiltradas.map(option => option[campo])
+  return [...new Set(opcoesFiltradas.map(option => option[campo]))].sort() 
 }
 
 const opFiltrada = () => {
@@ -64,5 +77,4 @@ const opFiltrada = () => {
     );
   });
 }
-
 </script>
