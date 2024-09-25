@@ -5,48 +5,48 @@
     <q-select
       class="col q-mx-md"
       label="Arma"
-      v-model="opSelecionada.arma"
-      :options="opMenu('arma')"
+      v-model="store.opSelecionada.arma"
+      :options="store.opMenu('arma')"
       clearable
   
     />
     <q-select
       class="col q-mx-md"
       label="Especie"
-      v-model="opSelecionada.especie"
-      :options="opMenu('especie')"
+      v-model="store.opSelecionada.especie"
+      :options="store.opMenu('especie')"
       clearable
   
     />
     <q-select
       class="col q-mx-md"
       label="Marca"
-      v-model="opSelecionada.marca"
-      :options="opMenu('marca')"
+      v-model="store.opSelecionada.marca"
+      :options="store.opMenu('marca')"
       clearable
     />
     <q-select
       class="col q-mx-md"
       label="Situação"
-      v-model="opSelecionada.situacao"
-      :options="opMenu('situacao')"
+      v-model="store.opSelecionada.situacao"
+      :options="store.opMenu('situacao')"
       clearable
     />
     <q-select
       class="col q-mx-md"
       label="ID"
-      v-model="opSelecionada.id"
-      :options="opMenu('id')"
+      v-model="store.opSelecionada.id"
+      :options="store.opMenu('id')"
       clearable
     />
   </div>
 
   <!-- RESULTADO PESQUISA -->
   <div class="q-ma-xl">
-    {{ opFiltrada() }}
+    {{ store.opFiltrada() }}
   </div>
 
-  <!-- TABELA -->
+  <!-- TABELA 
   <div class="q-ma-xl">
       <q-table 
         title="Armas"
@@ -60,16 +60,14 @@
       >
         
       </q-table>
-  </div>
+  </div>-->
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 // PINIA STORE
 import { useMainStore } from 'src/stores/mainStore'
 const store = useMainStore()
-
+/*
 const opSelecionada = ref({})
 
 const opMenu = (campo) => {
@@ -91,5 +89,6 @@ const opFiltrada = () => {
       !opSelecionada.value[key] || item[key] === opSelecionada.value[key]
     );
   });
-}
+} 
+*/
 </script>
