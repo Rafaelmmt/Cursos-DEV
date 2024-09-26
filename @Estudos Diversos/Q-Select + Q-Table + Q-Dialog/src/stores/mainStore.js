@@ -24,18 +24,11 @@ export const useMainStore = defineStore('main', {
     opSelecionada: {}
 
   }),
+  
   actions: {
-
+ 
     opMenu(campo) {
-      // Filtro cumulativo de todas as seleções feitas
-      const opcoesFiltradas = this.arrayOfObjects.filter(option => {
-        return Object.keys(this.opSelecionada).every(field => {
-          // Filtra apenas por campos que tenham um valor selecionado
-          return !this.opSelecionada[field] || option[field] === this.opSelecionada[field];
-        });
-      });
-    
-      // Retorna as opções únicas para o seletor baseado na chave (campo)
+      const opcoesFiltradas = this.opFiltrada()
       return [...new Set(opcoesFiltradas.map(option => option[campo]))].sort() 
     },
 
