@@ -1,8 +1,8 @@
 {
   "name": "q-select",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "Estudo Quasar: Utilização dos componentes Q-Select, Q-Table e Q-Dialog em conjunto.",
+  "productName": "Q-Select + Q-Table + Q-Dialog",
   "author": "Rafaelmmt <144057595+Rafaelmmt@users.noreply.github.com>",
   "private": true,
   "scripts": {

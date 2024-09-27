@@ -2,27 +2,24 @@ import { defineStore } from 'pinia';
 
 export const useMainStore = defineStore('main', {
   state: () => ({
-    anArray: ['armas', 'coletes', 'munições'],
-    anObject:{ arma:'revolver', especie:'asd', marca:'asdasdasd', modelo:'asdasdas', situação:'asdasd', id:1 },
     arrayOfObjects: [
-      { arma:'revolver', especie:'especie1', marca:'marca1', modelo:'modelo1', situacao:'A', id: 1, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'carabina', especie:'especie1', marca:'marca1', modelo:'modelo1', situacao:'C', id: 2, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'revolver', especie:'especie2', marca:'marca1', modelo:'modelo1', situacao:'B', id: 3, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'revolver', especie:'especie2', marca:'marca2', modelo:'modelo2', situacao:'A', id: 4, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'pistola', especie:'especie3', marca:'marca2', modelo:'modelo2', situacao:'A', id: 5, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'zabata', especie:'especie3', marca:'marca2', modelo:'modelo3', situacao:'B', id: 6, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'revolver', especie:'especie4', marca:'marca2', modelo:'modelo3', situacao:'B', id: 7, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'pistola', especie:'especie5', marca:'marca2', modelo:'modelo3', situacao:'A', id: 8, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'revolver', especie:'especie4', marca:'marca2', modelo:'modelo4', situacao:'B', id: 9, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'zabata', especie:'especie5', marca:'marca2', modelo:'modelo4', situacao:'A', id: 10, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'pistola', especie:'especie4', marca:'marca1', modelo:'modelo2', situacao:'B', id: 11, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'pistola', especie:'especie6', marca:'marca2', modelo:'modelo3', situacao:'D', id: 12, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'carabina', especie:'especie2', marca:'marca2', modelo:'modelo2', situacao:'A', id: 13, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'revolver', especie:'especie6', marca:'marca1', modelo:'modelo3', situacao:'B', id: 14, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 },
-      { arma:'pistola', especie:'especie4', marca:'marca1', modelo:'modelo1', situacao:'C', id: 15, outrainfo1:'marca1', outrainfo2:'modelo1', outrainfo3:'A', outrainfo4: 1 }
+      { id: 1, nome: 'O Poderoso Chefão', ano: 1972, nota: 9.2, diretor: 'Francis Ford Coppola', info01: 'A', info02: 'XXX', info03: 'filme tipo 5', info04: 'filme gênero D' },
+      { id: 2, nome: 'A Origem', ano: 2010, nota: 8.8, diretor: 'Christopher Nolan', info01: 'A', info02: 'XYZ', info03: 'filme tipo 3', info04: 'filme gênero B' },
+      { id: 3, nome: 'A Viagem de Chihiro', ano: 2001, nota: 8.6, diretor: 'Hayao Miyazaki', info01: 'B', info02: 'XXX', info03: 'filme tipo 1', info04: 'filme gênero E' },
+      { id: 4, nome: 'Os Bons Companheiros', ano: 1990, nota: 8.7, diretor: 'Martin Scorsese', info01: 'B', info02: 'XYZ', info03: 'filme tipo 1', info04: 'filme gênero A' },
+      { id: 5, nome: 'Um Estranho no Ninho', ano: 1975, nota: 8.7, diretor: 'Milos Forman', info01: 'A', info02: 'XYZ', info03: 'filme tipo 2', info04: 'filme gênero C' },
+      { id: 6, nome: 'O Exterminador do Futuro 2', ano: 1991, nota: 8.6, diretor: 'James Cameron', info01: 'C', info02: 'XYZ', info03: 'filme tipo 4', info04: 'filme gênero A' },
+      { id: 7, nome: 'A Outra História Americana', ano: 1998, nota: 8.5, diretor: 'Tony Kaye', info01: 'C', info02: 'XYZ', info03: 'filme tipo 4', info04: 'filme gênero A' },
+      { id: 8, nome: 'De Volta para o Futuro', ano: 1985, nota: 8.5, diretor: 'Robert Zemeckis', info01: 'A', info02: 'XXX', info03: 'filme tipo 5', info04: 'filme gênero C' },
+      { id: 9, nome: 'O Rei Leão', ano: 1994, nota: 8.5, diretor: 'Roger Allers', info01: 'B', info02: 'XXX', info03: 'filme tipo 5', info04: 'filme gênero A' },
+      { id: 10, nome: 'Parasita', ano: 2019, nota: 8.5, diretor: 'Bong Joon Ho', info01: 'C', info02: 'XYZ', info03: 'filme tipo 2', info04: 'filme gênero E' },
+      { id: 11, nome: 'Clube da Luta', ano: 1999, nota: 8.8, diretor: 'David Fincher', info01: 'C', info02: 'XXX', info03: 'filme tipo 2', info04: 'filme gênero B' },
+      { id: 12, nome: 'Batman: O Cavaleiro das Trevas', ano: 2008, nota: 9.0, diretor: 'Christopher Nolan', info01: 'A', info02: 'XYZ', info03: 'filme tipo 3', info04: 'filme gênero D' },
+      { id: 13, nome: 'Pulp Fiction: Tempo de Violência', ano: 1994, nota: 8.9, diretor: 'Quentin Tarantino', info01: 'B', info02: 'XXX', info03: 'filme tipo 3', info04: 'filme gênero B' },
+      { id: 14, nome: 'Réquiem para um Sonho', ano: 2000, nota: 8.3, diretor: 'Darren Aronofsky', info01: 'B', info02: 'XXX', info03: 'filme tipo 2', info04: 'filme gênero C' },
+      { id: 15, nome: 'Gladiador', ano: 2000, nota: 8.5, diretor: 'Ridley Scott', info01: 'A', info02: 'XXX', info03: 'filme tipo 1', info04: 'filme gênero A' }
     ],
     opSelecionada: {}
-
   }),
   
   actions: {
