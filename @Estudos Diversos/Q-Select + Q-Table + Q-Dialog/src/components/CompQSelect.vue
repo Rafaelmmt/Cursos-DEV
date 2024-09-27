@@ -3,9 +3,9 @@
   <div class="full-width row q-px-xl">
     <q-select
       class="col q-mx-md"
-      label="Nome"
-      v-model="store.opSelecionada.nome"
-      :options="store.opMenu('nome')"
+      label="Nota"
+      v-model="store.opSelecionada.nota"
+      :options="store.opMenu('nota')"
       clearable
   
     />
