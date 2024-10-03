@@ -58,7 +58,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { exportFile, useQuasar } from 'quasar'
 
 // PINIA STORE
@@ -75,7 +75,7 @@ const columns = ref([
   
 ])
 
-const filterTable = ref()
+const filterTable = ref(null)
 
 const modelDialog = ref(false)
 const selectedRow = ref({})
@@ -156,6 +156,10 @@ const exportTable = () => {
   }
 }
 
+// Limpar filtro tabela 
+watch(store.opSelecionada, () => {
+  filterTable.value = null
+})
 </script>
 
 <style>
