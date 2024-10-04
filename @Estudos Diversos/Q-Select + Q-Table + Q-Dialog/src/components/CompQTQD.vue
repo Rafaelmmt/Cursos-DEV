@@ -39,19 +39,45 @@
     </q-table>
 
     <!-- MODAL - MORE INFO -->
-    <q-dialog v-model="modelDialog">
-      <q-card>
-        <q-card-section>
-          <div class="text-h6">Detalhes</div>
-        </q-card-section>
+    <q-dialog
+      v-model="modelDialog"
+      transition-show="slide-up"
+      transition-hide="slide-down"
+    >
 
-        <q-card-section class="q-pt-none">{{ `Filme: "${selectedRow.nome}"` }}</q-card-section>
-        <q-card-section class="q-pt-none">{{ selectedRow }}</q-card-section>
+      <div class="row full-width" style="max-height: 80vh; max-width: 60vw;">
 
-        <q-card-actions align="right">
-          <q-btn flat label="OK" color="primary" @click="alert=false" v-close-popup />
-        </q-card-actions>
-      </q-card>
+        <div style="width: 50%;">
+          <q-card class="q-ma-sm" style="height: 75vh;">
+            <q-card-section>
+              <div class="text-h6">Detalhes</div>
+            </q-card-section>
+            <q-card-section class="q-pt-none">{{ `Filme: "${selectedRow.nome}"` }}</q-card-section>
+            <q-card-section class="q-pt-none">{{ selectedRow }}</q-card-section>
+          </q-card>
+        </div>
+        <div class="column" style="width:50%;">
+
+          <q-card class="q-ma-sm">
+            <q-card-section>
+              <div class="text-h6">Histórico 01</div>
+            </q-card-section>
+            <q-card-section class="q-pt-none">Nome</q-card-section>
+            <q-card-section class="q-pt-none">Data</q-card-section>
+          </q-card>
+          <q-card class="q-ma-sm">
+            <q-card-section>
+              <div class="text-h6">Histórico 02</div>
+            </q-card-section>
+            <q-card-section class="q-pt-none">Nome</q-card-section>
+            <q-card-section class="q-pt-none">Data</q-card-section>
+          </q-card>
+
+          
+        </div>
+      
+      </div>
+
     </q-dialog>
 
   </div>
