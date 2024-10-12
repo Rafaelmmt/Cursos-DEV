@@ -1,15 +1,31 @@
 <template>
   <div class="ctr">
+
+    <transition name="fade" mode="out-in"> 
+      <!-- QUESTÕES -->
+      <Questions 
+        v-show="questionsAnswered < questions.length"
+        :questions="questions"
+        :questionsAnswered="questionsAnswered"
+        @userAnswer="userAnswer" 
+      />
+    </transition>
+
+    <div v-show="questionsAnswered === questions.length">
+      
+      <!-- RESULTADOS -->
+      <Results :results="results" :userScore="userScore" />
+      
+      <button 
+        type="button" 
+        class="reset-btn"
+        @click.prevent="resetBtn()"
+      >
+        Reset
+      </button>
+
+    </div>    
     
-    <!-- QUESTÕES -->
-    <Questions 
-      v-if="userAnswers < questions.length"
-      :questions="questions" 
-    />
-
-    <!-- RESULTADOS -->
-    <Results v-else />
-
   </div>
 </template>
 
@@ -20,7 +36,21 @@ import { ref } from 'vue'
 import Questions from './components/Questions.vue'
 import Results from './components/Results.vue'
 
-const userAnswers = ref(0)
+const questionsAnswered = ref(0)
+const userScore = ref(0)
+
+const userAnswer = (isCorrect) => {
+  if(isCorrect) {
+    userScore.value++
+  }
+
+  questionsAnswered.value++
+}
+
+const resetBtn = () => {
+  questionsAnswered.value = 0
+  userScore.value = 0
+}
 
 // DADOS
 const questions = ref([
@@ -47,6 +77,7 @@ const questions = ref([
     answers: [
       { text: 'e', is_correct: false },
       { text: 'a', is_correct: true },
+      { text: 'u', is_correct: false },
       { text: 'i', is_correct: false }
     ]
   },
