@@ -1,13 +1,24 @@
 <template>
-
   <div class="result">
-    <div class="title">You got sample result 1!</div>
-    <div class="desc">Enter a short description here about the result.</div>
+    <div class="title"> {{ results[resultIndex].title }} </div>
+    <div class="desc"> {{ results[resultIndex].desc }} </div>
   </div>
-    
-  <button type="button" class="reset-btn">Reset</button>
-
 </template>
 
 <script setup>
+import { ref, computed, defineProps } from 'vue';
+// EMITS E PROPS
+const props = defineProps(['results', 'userScore'])
+
+// COMPUTED SCORE
+const resultIndex = computed(() => {
+  const position = ref(0)
+  props.results.forEach((el, index) => {
+    if(el.min <= props.userScore && el.max >= props.userScore) {
+      position.value = index 
+    }
+  })
+  return position.value
+}) 
+
 </script>
