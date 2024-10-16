@@ -10,4 +10,6 @@ CURSOS:
   <li>Vue JS 3: Composition API - with Pinia, Firebase 9 & Vite (Instrutor: Danny Connell - Disponínel em: https://www.udemy.com/course/vue-js-3-composition-api/)</li>
   <li>Vue Developer Bootcamp (Instrutores: Andrei Neagoie e Luis Ramirez Jr. - Disponínel em: https://www.udemy.com/course/complete-vue-js-developer-zero-to-mastery-vuex/)</li>
   <li>SQL Bootcamp (Instrutor: Jose Portilla - Disponínel em: https://www.udemy.com/course/the-complete-sql-bootcamp/)</li>
+  <li>Complete JavaScript Course 2024 (Instrutor: Jonas Schmedtmann - Disponínel em: https://www.udemy.com/course/the-complete-javascript-course/)</li>
+  <li>Web Development Bootcamp (Instrutor: Angela Yu - Disponínel em: https://www.udemy.com/course/the-complete-web-development-bootcamp/)</li>
 </ul>
