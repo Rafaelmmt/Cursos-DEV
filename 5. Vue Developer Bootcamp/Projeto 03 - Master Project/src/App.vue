@@ -1,23 +1,25 @@
 <template>
   <!-- Header -->
   <header id="header" class="bg-gray-700">
-    <nav class="container mx-auto flex justify-start items-center py-5 px-4">
-      <!-- App Name -->
-      <a class="text-white font-bold uppercase text-2xl mr-4" href="#">Music</a>
+      <nav class="container mx-auto flex justify-start items-center py-5 px-4">
+        <!-- App Name -->
+        <a class="text-white font-bold uppercase text-2xl mr-4" href="#"
+          >Music</a
+        >
 
-      <div class="flex flex-grow items-center">
-        <!-- Primary Navigation -->
-        <ul class="flex flex-row mt-1">
-          <!-- Navigation Links -->
-          <li>
-            <a class="px-2 text-white" href="#">Login / Register</a>
-          </li>
-          <li>
-            <a class="px-2 text-white" href="#">Manage</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <div class="flex flex-grow items-center">
+          <!-- Primary Navigation -->
+          <ul class="flex flex-row mt-1">
+            <!-- Navigation Links -->
+            <li>
+              <a class="px-2 text-white" href="#">Login / Register</a>
+            </li>
+            <li>
+              <a class="px-2 text-white" href="#">Manage</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
   </header>
 
   <!-- Introduction -->
@@ -30,8 +32,8 @@
       <div class="text-white main-header-content">
         <h1 class="font-bold text-5xl mb-5">Listen to Great Music!</h1>
         <p class="w-full md:w-8/12 mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et
-          dolor mollis, congue augue non, venenatis elit. Nunc justo eros,
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          et dolor mollis, congue augue non, venenatis elit. Nunc justo eros,
           suscipit ac aliquet imperdiet, venenatis et sapien. Duis sed magna
           pulvinar, fringilla lorem eget, ullamcorper urna.
         </p>
@@ -40,17 +42,21 @@
 
     <img
       class="relative block mx-auto mt-5 -mb-20 w-auto max-w-full"
-      src="/src/assets/img/introduction-music.png"
+      src="/assets/img/introduction-music.png"
     />
   </section>
 
   <!-- Main Content -->
   <section class="container mx-auto">
-    <div class="bg-white rounded border border-gray-200 relative flex flex-col">
+    <div
+      class="bg-white rounded border border-gray-200 relative flex flex-col"
+    >
       <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
         <span class="card-title">Songs</span>
         <!-- Icon -->
-        <i class="fa fa-headphones-alt float-right text-green-400 text-xl"></i>
+        <i
+          class="fa fa-headphones-alt float-right text-green-400 text-xl"
+        ></i>
       </div>
       <!-- Playlist -->
       <ol id="playlist">

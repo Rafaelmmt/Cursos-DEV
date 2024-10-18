@@ -2,7 +2,6 @@ import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
 import pluginVitest from '@vitest/eslint-plugin'
 import pluginCypress from 'eslint-plugin-cypress/flat'
-import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
 export default [
   {
@@ -30,5 +29,4 @@ export default [
       'cypress/support/**/*.{js,ts,jsx,tsx}'
     ],
   },
-  skipFormatting,
 ]
