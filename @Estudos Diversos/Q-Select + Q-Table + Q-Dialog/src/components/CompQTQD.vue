@@ -6,7 +6,7 @@
       title="FILMES"
       class="q-py-md q-px-xl"
       row-key="id"
-      :rows="store.opFiltrada()"
+      :rows="store.filtroTabela(store.arrayOfObjects, store.opSelecionada)"
       :columns="columns"
       :filter="filterTable"
       :pagination="{ sortBy: 'nome', rowsPerPage: 5 }"

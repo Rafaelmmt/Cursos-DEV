@@ -19,22 +19,40 @@ export const useMainStore = defineStore('main', {
       { id: 14, nome: 'Réquiem para um Sonho', ano: 2000, nota: 8.3, diretor: 'Darren Aronofsky', info01: 'B', info02: 'XXX', info03: 'filme tipo 2', info04: 'filme gênero C' },
       { id: 15, nome: 'Gladiador', ano: 2000, nota: 8.5, diretor: 'Ridley Scott', info01: 'A', info02: 'XXX', info03: 'filme tipo 1', info04: 'filme gênero A' }
     ],
+    arrayOfObjects02: [
+      { id: 1, info01: 'A', info02: 'XXX', info03: 'filme tipo 1', info04: 'filme gênero F' },
+      { id: 2, info01: 'B', info02: 'YXX', info03: 'filme tipo 2', info04: 'filme gênero F' },
+      { id: 3, info01: 'A', info02: 'XYX', info03: 'filme tipo 1', info04: 'filme gênero G' },
+      { id: 4, info01: 'A', info02: 'XXY', info03: 'filme tipo 2', info04: 'filme gênero G' },
+      { id: 5, info01: 'B', info02: 'XYX', info03: 'filme tipo 2', info04: 'filme gênero G' }
+    ],
     opSelecionada: {}
   }),
   
   actions: {
  
-    opMenu(campo) {
-      const opcoesFiltradas = this.opFiltrada()
-      return [...new Set(opcoesFiltradas.map(option => option[campo]))].sort() 
+    // opMenu(campo) {
+    //   const opcoesFiltradas = this.opFiltrada()
+    //   return [...new Set(opcoesFiltradas.map(option => option[campo]))].sort() 
+    // },
+
+    // opFiltrada() {
+    //   return this.arrayOfObjects.filter(item => {
+    //     return Object.keys(this.opSelecionada).every(key => 
+    //       !this.opSelecionada[key] || item[key] === this.opSelecionada[key]
+    //     );
+    //   });
+    // }, 
+
+    selectOptions (campos, array, model) {
+      const filtroArray = array.filter(item => Object.keys(model).every(key => !model[key] || item[key] === model[key]))
+      return [...new Set(filtroArray.map(option => option[campos]))].sort()
     },
 
-    opFiltrada() {
-      return this.arrayOfObjects.filter(item => {
-        return Object.keys(this.opSelecionada).every(key => 
-          !this.opSelecionada[key] || item[key] === this.opSelecionada[key]
-        );
-      });
-    }
+    filtroTabela(array, model) {
+      return array.filter(item => { 
+        return Object.keys(model).every(key => !model[key] || item[key] === model[key])
+      })
+    }, 
   }
 });
