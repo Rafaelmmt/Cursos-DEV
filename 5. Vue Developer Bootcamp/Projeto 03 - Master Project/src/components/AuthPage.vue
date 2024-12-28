@@ -164,10 +164,26 @@
 
 <script setup>
 import { ref } from 'vue'
+//import firebase from '@/includes/firebase'
 
 // PINIA STORE
 import { useModalsStore } from '@/stores/modals' 
 const mStore = useModalsStore()
 
 const tab = ref('login')
+
+
+// // REGISTRO DE USUÁRIO
+// const userCred = ref(null)
+// const registerUser = async(user) => {
+//   try {
+//     userCred.value = await firebase.auth()
+//     .createUserWithEmailAndPassword(user.email, user.password)
+//   } catch (error) { 
+//     console.log('Erro: ', error)
+//   }
+//   console.log(userCred)
+// }
+
+
 </script>
