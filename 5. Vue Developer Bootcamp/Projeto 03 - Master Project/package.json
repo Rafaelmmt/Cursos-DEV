@@ -13,6 +13,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@vee-validate/rules": "^4.15.0",
     "firebase": "^11.1.0",
     "pinia": "^2.2.4",
     "vee-validate": "^4.15.0",
